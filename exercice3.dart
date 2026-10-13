@@ -3,4 +3,5 @@ class Compte {
   final String numeroCompte;
 
   Compte(this.numeroCompte, [double solde = 0.0]) : _solde = solde;
+  String get solde => '${_solde.toStringAsFixed(2)} \$';
   
