@@ -27,3 +27,15 @@ class Film extends Media {
     print('Ceci est un Film : $titre ($dureeMinutes minutes).');
   }
 }
+void main() {
+  List<Media> catalogue = [
+    Livre('Mes beaux réves', 'Mouloud Mammerie'),
+    Livre('La Rebelle', 'Matoub Lounes'),
+    Film('fast and furious', 139),
+    Film('Rambo', 188),
+  ];
+
+  for (var m in catalogue) {
+    m.afficherType();
+  }
+}
