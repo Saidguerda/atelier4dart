@@ -14,3 +14,11 @@ class Cercle extends Forme {
   @override
   double calculerAire() => pi * rayon * rayon;
 }
+class Rectangle extends Forme {
+  double longueur;
+  double largeur;
+  Rectangle(this.longueur, this.largeur);
+
+  @override
+  double calculerAire() => longueur * largeur;
+}
