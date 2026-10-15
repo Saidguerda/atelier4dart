@@ -24,3 +24,16 @@ class BaseDeDonnees implements Connectable {
     print("BaseDeDonnees : Connexion fermée.");
   }
 }
+void main() {
+  var serveur = ServeurAPI();
+  var base = BaseDeDonnees();
+
+  List<Connectable> services = [];
+  services.add(serveur);
+  services.add(base);
+
+  for (var service in services) {
+    service.connecter("Said");
+    service.deconnecter();
+  }
+}
